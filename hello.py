@@ -10,5 +10,10 @@ def hello_world():
 def bye():
     return "<p>Bye, World!</p>"
 
+@app.route("/username/<name>")
+def great(name):
+    return f"Hello, {name}"
+
+
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
